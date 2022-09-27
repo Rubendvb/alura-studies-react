@@ -1,10 +1,11 @@
 import { Button } from "../Button/Button";
+import "./style.scss";
 
 export function Form() {
   return (
     <>
-      <form>
-        <div>
+      <form className="novaTarefa">
+        <div className="inputContainer">
           <label htmlFor="tarefa">Adicione uma nova tarefa</label>
           <input
             type="text"
@@ -15,7 +16,7 @@ export function Form() {
           />
         </div>
 
-        <div>
+        <div className="inputContainer">
           <label htmlFor="tempo">Tempo</label>
           <input
             type="time"

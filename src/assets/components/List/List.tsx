@@ -1,18 +1,33 @@
+import "./styles.scss";
+
 export function List() {
+  const tarefas = [
+    {
+      tarefa: "React",
+      tempo: "02:00:00",
+    },
+    {
+      tarefa: "Javascript",
+      tempo: "01:30:00",
+    },
+    {
+      tarefa: "TypeScript",
+      tempo: "01:30:00",
+    },
+  ];
+
   return (
     <>
-      <aside>
+      <aside className="listaTarefas">
         <h2>Estudos do dia</h2>
 
         <ul>
-          <li>
-            <h3>React</h3>
-            <span>02:00:00</span>
-          </li>
-          <li>
-            <h3>JavaScript</h3>
-            <span>01:30:00</span>
-          </li>
+          {tarefas.map((item, index) => (
+            <li key={index} className="item">
+              <h3>{item.tarefa}</h3>
+              <span>{item.tempo}</span>
+            </li>
+          ))}
         </ul>
       </aside>
     </>
