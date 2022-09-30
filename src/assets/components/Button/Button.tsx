@@ -1,8 +1,17 @@
-import "./styles.scss";
-export function Button() {
+import style from "./Button.module.scss";
+
+interface Props {
+  texto: string;
+  type?: "button" | "submit" | "reset" | undefined;
+}
+
+export function Button(props: Props) {
+  const { type = "button" } = props;
   return (
     <>
-      <button className="botao">Botão</button>
+      <button type={type} className={style.botao}>
+        {props.texto}
+      </button>
     </>
   );
 }
