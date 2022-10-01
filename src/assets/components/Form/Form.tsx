@@ -19,7 +19,7 @@ class Form extends React.Component<{
       { ...this.state, selecionado: false, completado: false, id: uuidv4() },
     ]);
     this.setState({
-      tarefas: "",
+      tarefa: "",
       tempo: "00:00",
     });
   }
@@ -61,7 +61,7 @@ class Form extends React.Component<{
           />
         </div>
 
-        <Button type="submit" texto="Adiconar" />
+        <Button type="submit" texto="Adicionar" />
       </form>
     );
   }
