@@ -1,17 +1,17 @@
+import React from "react";
 import style from "./Button.module.scss";
 
 interface Props {
-  texto: string;
   type?: "button" | "submit" | "reset" | undefined;
   onClick?: () => void;
+  children?: React.ReactNode;
 }
 
-export function Button(props: Props) {
-  const { type = "button", onClick } = props;
+export function Button({ onClick, type, children }: Props) {
   return (
     <>
       <button onClick={onClick} type={type} className={style.botao}>
-        {props.texto}
+        {children}
       </button>
     </>
   );

@@ -38,7 +38,7 @@ export function StopWatch({ selecionado, finalizarTarefa }: Props) {
         <Watch tempo={tempo} />
       </div>
 
-      <Button onClick={() => regressiva(tempo)} texto="Começar" />
+      <Button onClick={() => regressiva(tempo)}>Começar</Button>
     </div>
   );
 }

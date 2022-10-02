@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Form from "../Form/Form";
+import { Form } from "../Form/Form";
 import { List } from "../List/List";
 import { StopWatch } from "../StopWatch/StopWatch";
 import { ITarefa } from "../types/tarefa";
