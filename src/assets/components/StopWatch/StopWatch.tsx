@@ -8,9 +8,10 @@ import { useEffect, useState } from "react";
 
 interface Props {
   selecionado: ITarefa | undefined;
+  finalizarTarefa: () => void;
 }
 
-export function StopWatch({ selecionado }: Props) {
+export function StopWatch({ selecionado, finalizarTarefa }: Props) {
   const [tempo, setTempo] = useState<number>();
 
   useEffect(() => {
@@ -25,6 +26,7 @@ export function StopWatch({ selecionado }: Props) {
         setTempo(contador - 1);
         return regressiva(contador - 1);
       }
+      finalizarTarefa();
     }, 1000);
   }
 
