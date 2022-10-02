@@ -23,10 +23,8 @@ export function StopWatch({ selecionado }: Props) {
     <div className={style.cronometro}>
       <p className={style.titulo}>Inicia cronometro</p>
 
-      <p>Tempo: {tempo}</p>
-
       <div className={style.relogioWrapper}>
-        <Watch />
+        <Watch tempo={tempo} />
       </div>
 
       <Button texto="Começar" />
