@@ -19,6 +19,15 @@ export function StopWatch({ selecionado }: Props) {
     }
   }, [selecionado]);
 
+  function regressiva(contador: number = 0) {
+    setTimeout(() => {
+      if (contador > 0) {
+        setTempo(contador - 1);
+        return regressiva(contador - 1);
+      }
+    }, 1000);
+  }
+
   return (
     <div className={style.cronometro}>
       <p className={style.titulo}>Inicia cronometro</p>
@@ -27,7 +36,7 @@ export function StopWatch({ selecionado }: Props) {
         <Watch tempo={tempo} />
       </div>
 
-      <Button texto="Começar" />
+      <Button onClick={() => regressiva(tempo)} texto="Começar" />
     </div>
   );
 }
