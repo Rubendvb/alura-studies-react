@@ -5,3 +5,8 @@ export interface ITarefa {
   completado: boolean;
   id: string;
 }
+
+export interface Props {
+  tarefas: ITarefa[];
+  selecionaTarefa: (tarefaSelecionada: ITarefa) => void;
+}

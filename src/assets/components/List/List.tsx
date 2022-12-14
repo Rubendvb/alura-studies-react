@@ -1,11 +1,6 @@
-import { ITarefa } from "../types/tarefa";
+import { Props } from "../types/tarefa";
 import { Item } from "./Item/Item";
 import style from "./List.module.scss";
-
-interface Props {
-  tarefas: ITarefa[];
-  selecionaTarefa: (tarefaSelecionada: ITarefa) => void;
-}
 
 export function List({ tarefas, selecionaTarefa }: Props) {
   return (
